@@ -1,0 +1,14 @@
+[Unit]
+Description=Message Relay Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/app
+ExecStart=/usr/bin/python3 /app/msgrelay.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 

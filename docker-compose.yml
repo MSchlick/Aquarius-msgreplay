@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  msgrelay:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: msgrelay
+    privileged: true  # Notwendig für systemd
+    restart: unless-stopped
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro  # Notwendig für systemd
+    ports:
+      - "8000:8000"  # Wenn der Service einen Port verwenden soll
