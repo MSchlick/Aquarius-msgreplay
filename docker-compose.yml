@@ -11,4 +11,4 @@ services:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro  # Notwendig für systemd
     ports:
-      - "8000:8000"  # Wenn der Service einen Port verwenden soll
+      - "65172:65172"  # Wenn der Service einen Port verwenden soll
